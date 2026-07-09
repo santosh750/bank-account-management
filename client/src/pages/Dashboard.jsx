@@ -1,5 +1,5 @@
 import React from "react";
-import SideBar from "../components/SideBar";
+import Sidebar from "../components/sidebar";
 import AccountManager from "../components/AccountManager";
 import DeptList from "../components/DeptList";
 import "./Dashboard.css";
