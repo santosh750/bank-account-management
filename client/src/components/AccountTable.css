@@ -1,0 +1,55 @@
+.table-container{
+    overflow-x:auto;
+}
+
+.account-table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.account-table thead{
+    background:#2563eb;
+    color:white;
+}
+
+.account-table th,
+.account-table td{
+    padding:15px;
+    text-align:left;
+}
+
+.account-table tbody tr{
+    border-bottom:1px solid #eee;
+    transition:.3s;
+}
+
+.account-table tbody tr:hover{
+    background:#f4f8ff;
+}
+
+.edit-btn{
+    background:#22c55e;
+    color:white;
+    border:none;
+    padding:8px 10px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-right:8px;
+}
+
+.delete-btn{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:8px 10px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.edit-btn:hover,
+.delete-btn:hover{
+    transform:scale(1.08);
+}

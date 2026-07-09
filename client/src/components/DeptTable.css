@@ -1,0 +1,55 @@
+.dept-table-container {
+    overflow-x: auto;
+}
+
+.dept-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.dept-table thead {
+    background: #2563eb;
+    color: white;
+}
+
+.dept-table th,
+.dept-table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.dept-table tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.dept-table tbody tr:hover {
+    background: #f4f8ff;
+}
+
+.edit-btn {
+    background: #22c55e;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    transform: scale(1.08);
+}

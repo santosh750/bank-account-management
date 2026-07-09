@@ -1,0 +1,41 @@
+.dept-container{
+    margin-top:30px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.dept-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.dept-header h2{
+    color:#1e3a8a;
+    margin-bottom:5px;
+}
+
+.dept-header p{
+    color:#666;
+}
+
+.dept-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.dept-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}

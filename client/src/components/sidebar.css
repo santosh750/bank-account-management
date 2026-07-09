@@ -1,0 +1,86 @@
+.sidebar {
+    width: 260px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #1e3a8a, #0f172a);
+    color: white;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.logo-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.bank-icon {
+    font-size: 55px;
+    color: gold;
+}
+
+.logo-section h2 {
+    margin-top: 10px;
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    color: gray;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-icon {
+    font-size: 65px;
+    color: #60a5fa;
+}
+
+.profile h3 {
+    margin: 10px 0 5px;
+}
+
+.profile p {
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+.menu {
+    margin-top: 20px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 10px;
+}
+
+.menu-item:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.logout {
+    margin-top: 40px;
+    color: #f87171;
+}
