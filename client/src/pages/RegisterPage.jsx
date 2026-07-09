@@ -14,24 +14,27 @@ export default function RegisterPage() {
     e.preventDefault();
 
     try {
-      await axios.post("${import.meta.env.VITE_API_URL}/api/auth/register", {
-        email,
-        password,
-      });
+      await axios.post(
+        `${import.meta.env.VITE_API_URL}/api/auth/register`,
+        {
+          email,
+          password,
+        }
+      );
 
       alert("Registration Successful");
       navigate("/");
     } catch (err) {
-  console.error("Registration Error:", err);
+      console.error("Registration Error:", err);
 
-  if (err.response) {
-    console.log("Status:", err.response.status);
-    console.log("Data:", err.response.data);
-    alert(err.response.data.message || JSON.stringify(err.response.data));
-  } else {
-    alert(err.message);
-  }
-}
+      if (err.response) {
+        console.log("Status:", err.response.status);
+        console.log("Data:", err.response.data);
+        alert(err.response.data.message || JSON.stringify(err.response.data));
+      } else {
+        alert(err.message);
+      }
+    }
   };
 
   return (
@@ -55,7 +58,7 @@ export default function RegisterPage() {
               type="email"
               placeholder="Email Address"
               value={email}
-              onChange={(e)=>setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
@@ -66,7 +69,7 @@ export default function RegisterPage() {
               type="password"
               placeholder="Password"
               value={password}
-              onChange={(e)=>setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
