@@ -13,7 +13,7 @@ export default function AccountTable({ onEdit }) {
   // Fetch all accounts
   const fetchAccounts = () => {
     axios
-      .get("${import.meta.env.VITE_API_URL}/api/accounts")
+      .get(`${import.meta.env.VITE_API_URL}/api/accounts`)
       .then((res) => setAccounts(res.data))
       .catch((err) => console.error(err));
   };

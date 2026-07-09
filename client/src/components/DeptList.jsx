@@ -10,8 +10,13 @@ export default function DeptList() {
 
   const fetchDepartments = () => {
     axios
-      .get("${import.meta.env.VITE_API_URL}/api/departments")
-      .then((res) => setDepartments(res.data));
+      .get(`${import.meta.env.VITE_API_URL}/api/departments`)
+      .then((res) => {
+        setDepartments(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   useEffect(() => {
@@ -19,14 +24,14 @@ export default function DeptList() {
   }, []);
 
   const addDepartment = async () => {
-    if (!deptName) {
+    if (!deptName.trim()) {
       alert("Enter department name");
       return;
     }
 
     try {
-      await axios.post("${import.meta.env.VITE_API_URL}/api/departments", {
-        name: deptName
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/departments`, {
+        name: deptName,
       });
 
       setDeptName("");
@@ -34,6 +39,7 @@ export default function DeptList() {
 
     } catch (error) {
       console.log(error);
+      alert("Unable to add department");
     }
   };
 
@@ -59,7 +65,6 @@ export default function DeptList() {
             Add Department
           </button>
         </div>
-
       </div>
 
       <DeptTable departments={departments} />
