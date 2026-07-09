@@ -20,7 +20,9 @@ mongoose
   })
   .then(() => console.log("✅ Connected to MongoDB Atlas"))
   .catch((err) => console.error("❌ MongoDB connection error:", err));
-
+app.get("/", (req, res) => {
+  res.send("🚀 Bank Account Management Backend is Running!");
+}); 
 app.use("/api/auth", authRoutes);
 app.use("/api/accounts", accountRoutes);
 app.use("/api/departments", departmentRoutes);
