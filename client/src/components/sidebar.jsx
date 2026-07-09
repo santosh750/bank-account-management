@@ -7,7 +7,7 @@ import {
   FaSearch,
   FaUserCircle,
 } from "react-icons/fa";
-import "./SideBar.css";
+import "./sidebar.css";
 
 export default function SideBar() {
   return (
