@@ -10,7 +10,7 @@ export default function DeptList() {
 
   const fetchDepartments = () => {
     axios
-      .get("http://localhost:5000/api/departments")
+      .get("${import.meta.env.VITE_API_URL}/api/departments")
       .then((res) => setDepartments(res.data));
   };
 
@@ -25,7 +25,7 @@ export default function DeptList() {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/departments", {
+      await axios.post("${import.meta.env.VITE_API_URL}/api/departments", {
         name: deptName
       });
 

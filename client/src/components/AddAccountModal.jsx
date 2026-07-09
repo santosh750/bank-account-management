@@ -48,14 +48,14 @@ export default function AddAccountModal({ closeModal, account }) {
     try {
       if (account) {
         await axios.put(
-          `http://localhost:5000/api/accounts/${account._id}`,
+          `${import.meta.env.VITE_API_URL}/api/accounts/${account._id}`,
           formData
         );
 
         alert("Account Updated Successfully");
       } else {
         await axios.post(
-          "http://localhost:5000/api/accounts",
+          "${import.meta.env.VITE_API_URL}/api/accounts",
           formData
         );
 

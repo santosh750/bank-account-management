@@ -13,7 +13,7 @@ export default function AccountTable({ onEdit }) {
   // Fetch all accounts
   const fetchAccounts = () => {
     axios
-      .get("http://localhost:5000/api/accounts")
+      .get("${import.meta.env.VITE_API_URL}/api/accounts")
       .then((res) => setAccounts(res.data))
       .catch((err) => console.error(err));
   };
@@ -27,7 +27,7 @@ export default function AccountTable({ onEdit }) {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/accounts/${id}`);
+      await axios.delete(`${import.meta.env.VITE_API_URL}/api/accounts/${id}`);
 
       alert("Account deleted successfully");
 
